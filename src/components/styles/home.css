@@ -1,0 +1,29 @@
+.home-text {
+  display: flex;
+  padding-top: 40px;
+  height: 95vh;
+  overflow: auto;
+  justify-content: center;
+  color: #0098f1;
+  /* padding-top: 40px; */
+  height: 90vh;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.home-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  color: #0098f1;
+  justify-content: center;
+}
+
+.upload-button-btn {
+  position: relative;
+}
+.upload-button {
+  opacity: 0;
+  position: absolute;
+}

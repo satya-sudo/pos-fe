@@ -1,0 +1,28 @@
+.noun {
+  color:#1F8A70;
+}
+
+.verb {
+  color:#301E67;
+}
+
+.adverb {
+  color:#5B8FB9;
+}
+
+.adject {
+  color: #FC7300;
+}
+
+.stats-header {
+  font-size: 25px;
+  color: #0098f1;
+  font-weight: 900;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+}
+.stats-container {
+  height: 95vh;
+}

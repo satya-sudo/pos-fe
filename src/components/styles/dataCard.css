@@ -1,0 +1,27 @@
+.dataCard-container{
+  color: #0098f1;
+  font-weight: 900;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.dataCard-visualize {
+  padding-top: 8px;
+  display: flex;
+}
+
+.noun {
+  background-color:#1F8A70;
+}
+
+.verb {
+  background-color:#301E67;
+}
+
+.adverb {
+  background-color:#5B8FB9;
+}
+
+.adject {
+  background-color: #FC7300;
+}
