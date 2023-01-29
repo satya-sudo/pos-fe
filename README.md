@@ -1,5 +1,6 @@
 Front End service of Text Analyse
 
-Steps to
-npm i
+Steps to run
+```npm i
 npm start
+```
