@@ -1,6 +1,7 @@
 import React from "react";
 import ChartWrapper from "./chart";
 import './styles/dataCard.css'
+import Chip from '@mui/material/Chip';
 
 const dataCard = ({
   sentense,summary,start
@@ -18,25 +19,14 @@ const dataCard = ({
     return {labels,series}
   }
   const mapSentence = (sentense,summary) => {
-    const sentenseWord = sentense.split(' ')
+    const sentenseWord = Object.entries(summary)
+    let ChipData = []
     
-    sentenseWord.map(ele => {
-      let element;
-      if (summary.noun.elements.includes(ele) ){
-        element = <div className="noun">` ${ele}`</div>
-        console.log("a")
-      } else if (summary.verb.elements.includes(ele) ){
-        element = <div className="verb">` ${ele}`</div>
-      } else if (summary.adj.elements.includes(ele) ){
-        element = <div className="adject">` ${ele}`</div>
-      } else if (summary.adv.elements.includes(ele) ){
-        element = <div className="adverb">` ${ele}`</div>
-      } else {
-        element = <div >` ${ele}`</div>
-      }
-      return  element;
+    sentenseWord.forEach(ele => {
+      console.log(ele[1].elements)
+      ChipData = [...ChipData,...ele[1].elements?ele[1].elements.map(eleData=><Chip size="small" className={ele[0]} label={eleData}/>):[]]
     })
-    return sentenseWord;
+    return ChipData;
   }
   if (!sentense && !start) { return null}
   return (<div className="dataCard-container">
@@ -45,7 +35,14 @@ const dataCard = ({
     }
     <div className="dataCard-visualize">
       <ChartWrapper data={getData()} width={sentense? 300: 500} height={sentense?300:500}/>
+      <div className="sentence-data">
       {sentense ? <div>{sentense}</div>:null}
+      <div className="chip-stack">
+      {mapSentence(null,summary)}
+
+      </div>
+      </div>
+      
     </div>
   </div>)
 }

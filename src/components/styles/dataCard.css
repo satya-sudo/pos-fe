@@ -11,17 +11,33 @@
 }
 
 .noun {
-  background-color:#1F8A70;
+  background:#1F8A70;
+  margin: 2px;
+  color: aliceblue;
 }
 
 .verb {
-  background-color:#301E67;
+  background:#301E67;
+  margin: 2px;
+  color: aliceblue;
 }
 
-.adverb {
-  background-color:#5B8FB9;
+.adv {
+  background:#5B8FB9;
+  margin: 2px;
+  color: aliceblue;
 }
 
-.adject {
-  background-color: #FC7300;
+.adj {
+  background: #FC7300;
+  margin: 2px;
+  color: aliceblue;
+}
+.sentence-data {
+  display: flex;
+  flex-direction: column;
+}
+.chip-stack{
+  display: flex;
+  flex-wrap: wrap;
 }
